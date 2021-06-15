@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Teste de Nacionalidade</h1>
+    Qual seu País de Origem? <input type="text" name="pais" id="pais"><br><br>
+    <div id="texto">
+
+    </div><br>
+    <input type="button" value="Verificar" onclick="texto_tela()">
+    <script>
+        function texto_tela(){
+            var pais = window.document.getElementById('pais').value.toUpperCase()
+            var texto = window.document.getElementById('texto')
+            texto.innerHTML=`Seu país de Origem é: <strong>${pais}</strong>`  
+            if (pais == 'BRASIL'){
+                texto.innerHTML += '<br>Você é: <strong>BRASILEIRO</strong>'
+            }else{
+                texto.innerHTML += '<br>Você é: <strong>ESTRANGEIRO</strong>'
+            }
+
+            }
+    </script>
+    
+</body>
+</html>
